@@ -8,21 +8,37 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="main">
-        <div class="header">
-            <h1>ROCK PAPER SCISSORS</h1>
-        </div>
-        <div class="container">
-            <div class="playeroptions">
-                <button id="rock" value="rock">Rock</button>
-                <button id="paper" value="paper">Paper</button>
-                <button id="scissors" value="scissors">Scissors</button>
+    <div class="bg"></div>
+        <div class="main">
+            <div class="header">
+                <div class="headerbox">
+                    <p class="rockheader">ROCK</p>
+                    <p class="paperheader">PAPER</p>
+                    <p class="scissorsheader">SCISSORS</p>
+                </div>
+                <div class="headerpicturebox">
+                    <div class="headerimagerock"><img src="/Odin/RPS/pics/rockheader.png" class="headerrock"></div>
+                    <div class="headerimagepaper"><img src="/Odin/RPS/pics/paperheader.png" class="headerpaper"></div>
+                    <div class="headerimagescissors"><img src="/Odin/RPS/pics/scissorsheader.png" class="headerscissors"></div>
+                </div>
+            </div>
+            <hr>
+            <div class="container">
+            <div class="results">
+                <div class="scores">Player Score <div id="playerscore">0</div></div>
+                <div class="scores">Computer Score <div id="computerscore">0</div></div>
+            </div>
+            <p id="text">Choose 'ur hand</p>
+                <div class="playeroptions">
+                    <button class="buttons" id="rock"><img src="/Odin/RPS/pics/rock.png" class="images"/></button>
+                    <button class="buttons" id="paper"><img src="/Odin/RPS/pics/paper.png" class="images"/></button>
+                    <button class="buttons" id="scissors"><img src="/Odin/RPS/pics/scissors.png" class="images"/></button>
+                </div>
+            </div>
+            <div class="footer">
+                <p>Kerim O. 2022 RPS for The Odin Project</p>
             </div>
         </div>
-        <div class="footer">
-            <p>Kerim O. 2022 RPS for The Odin Project</p>
-        </div>
-    </div>
     <script src="script.js"></script>
 </body>
 </html>
