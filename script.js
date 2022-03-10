@@ -72,7 +72,7 @@ computerwins();
   case "rockrock":  
   case "paperpaper":
   case "scissorscissors":
-    textBox.innerText = "It's a tie"; 
+    textBox.innerText = "It's a draw"; 
     tie();
     break
   }

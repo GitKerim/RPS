@@ -151,11 +151,12 @@ line-height: 36px;
 }
 #playerscore,#computerscore{
     color:#ffffff;
-    font-size: 25px;
+    font-size: 35px;
 }
 #text{
-    font-size: 25px;
+    font-size: 35px;
     color: white;
+    font-weight: bold;
 }
 .playeroptions{
     display: flex;
@@ -173,6 +174,7 @@ button{
     box-sizing: border-box;
     border-color:red;
     border-style: solid;
+    cursor: pointer;
 }
 /* :hover.buttons{
     background-color:rgba(255,236,217,0.2);
