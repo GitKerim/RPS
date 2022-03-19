@@ -11,6 +11,7 @@ body{
     justify-content:center;
 
 }
+/* Background picture */
 .bg {
     /* this is needed or the background will be offset by a few pixels at the top */
     overflow: auto;
@@ -36,12 +37,7 @@ body{
     -ms-filter: blur(5px);
     filter: blur(5px);
 }
-hr{
-    background-color: red;
-    height:1px;
-    width:80%;
-    border:none;
-}
+
 .main{
     display: flex;
     flex-direction: column;
@@ -52,6 +48,7 @@ hr{
     height: 90%;
     box-shadow: 0 0 5px 10px rgba(0, 0, 0, 0.8);
 }
+/* Header */
 .header{
     font-weight: bold;
     font-size: large;
@@ -125,11 +122,17 @@ line-height: 36px;
     width: 80%;
     height: 80%;
 }
+/* Main content */
 .container{
     margin:30px 0px;
     width:50%;
 }
-
+hr{
+    background-color: red;
+    height:1px;
+    width:80%;
+    border:none;
+}
 
 .results{
     display: flex;
@@ -165,6 +168,7 @@ line-height: 36px;
     gap: 20px;
     width: 100%;
 }
+/* buttons */
 .buttons{
     border-radius: 50px;
     border-width: 2px;
@@ -187,13 +191,7 @@ line-height: 36px;
     width: 80%;
     pointer-events: none;
 }
-.footer{
-    height:15%;
-    width:100%;
-    margin-top: auto;
-    font-size: 12px;
-    color: white;
-}
+
 .winglow{
     border-color:rgba(159,216,219,0.8);
     box-shadow:  0 0 8px rgba(159,216,219,0.8);
@@ -209,28 +207,38 @@ line-height: 36px;
     box-shadow:  0 0 8px rgba(255,255,179,0.8);
     background-color: rgba(255,255,179,0.8);
 }
+/* popup windows */
 #popup {
+    position: absolute; 
+    left: 0; 
+    right: 0; 
+    top:0%;
+    bottom: 0%;
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 100%; 
+    height:100%;
+    display:none;
+    backdrop-filter: blur(3px);
+
+  }
+  .popup-div{
     position: absolute; 
     left: 0; 
     right: 0; 
     margin-left: auto; 
     margin-right: auto; 
-    width: 50%; 
-    height:50%;
-    display:none;
-    z-index: 2;
+    top: 25%;
+    width:50%;
+    height: 60%;
+    border: 2px solid red;
+    background-color:rgba(0, 0, 0, 0.9);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
   }
-  .popup-div{
-      width:100%;
-      height: 100%;
-      border: 2px solid red;
-      background-color: wheat;
-      border-radius: 15px;
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-  }
-  .popup-button{
+  #popup-button{
     border-radius: 50px;
     border-width: 2px;
     height: 120px;
@@ -240,9 +248,19 @@ line-height: 36px;
     border-color:red;
     border-style: solid;
     cursor: pointer;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
   }
   #popup-p{
     font-size: 40px;
     font-weight: bold;
     color: white;
   }
+  .footer{
+    height:15%;
+    width:100%;
+    margin-top: auto;
+    font-size: 12px;
+    color: white;
+}

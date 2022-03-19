@@ -36,20 +36,21 @@ function computerwins(){
     document.getElementById(playerPick).classList.add("tieglow");
     setTimeout(function(){document.getElementById(playerPick).classList.remove("tieglow");}, 700);
     }
-function hidewindow(){
+function showwindow(){
   let window = document.getElementById("popup");
   window.style.display = 'block';
 }
 function wincounter(){
   let popupText = document.getElementById("popup-p");
-
+  let popupButton = document.getElementById("popup-button");
   if(playerScore === 5){
     popupText.innerText = "Player Wins !"; 
-hidewindow();
-
+    popupButton.style.cssText = "border-color:rgba(159,216,219,0.8); box-shadow: 0 0 8px rgba(159,216,219,0.8); background-color:rgba(159,216,219,0.8);";
+showwindow();
   }else if(computerScore === 5){
-    popupText.innerText = "Computer Wins !"; 
-hidewindow();
+    popupText.innerText = "Computer Wins !";
+    popupButton.style.cssText = " border-color: rgba(255,102,93,0.8); box-shadow:  0 0 8px rgba(255,102,93,0.8); background-color: rgba(255,102,93,0.8);";
+showwindow();
   } 
 }
 
