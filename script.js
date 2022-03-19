@@ -39,7 +39,14 @@ function computerwins(){
 function showwindow(){
   let window = document.getElementById("popup");
   window.style.display = 'block';
-}
+  let btn = document.querySelector("#popup-button");
+  btn.addEventListener("click", function (){
+  window.style.display = 'none';
+  playerScore = 0;
+  computerScore = 0;
+  computerScoreDisplay.innerHTML = 0;
+  playerScoreDisplay.innerHTML = 0;
+});}
 function wincounter(){
   let popupText = document.getElementById("popup-p");
   let popupButton = document.getElementById("popup-button");
