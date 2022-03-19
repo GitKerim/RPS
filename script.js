@@ -13,28 +13,29 @@ playerChoices.forEach(playerChoice => playerChoice.addEventListener("click", (e)
   computerPlay();
   game();
 }))
+
 function playerwins(){
 document.getElementById(playerPick).classList.add("winglow");
-setTimeout(function(){document.getElementById(playerPick).classList.remove("winglow");}, 700);
+setTimeout(function(){document.getElementById(playerPick).classList.remove("winglow");}, 600);
 
 document.getElementById(computerPick).classList.add("loseglow");
-setTimeout(function(){document.getElementById(computerPick).classList.remove("loseglow");}, 700);
+setTimeout(function(){document.getElementById(computerPick).classList.remove("loseglow");}, 600);
 }
 
 function computerwins(){
   document.getElementById(computerPick).classList.add("winglow");
-  setTimeout(function(){document.getElementById(computerPick).classList.remove("winglow");}, 700);
+  setTimeout(function(){document.getElementById(computerPick).classList.remove("winglow");}, 600);
   
   document.getElementById(playerPick).classList.add("loseglow");
-  setTimeout(function(){document.getElementById(playerPick).classList.remove("loseglow");}, 700);
+  setTimeout(function(){document.getElementById(playerPick).classList.remove("loseglow");}, 600);
   }
 
   function tie(){
     document.getElementById(computerPick).classList.add("tieglow");
-    setTimeout(function(){document.getElementById(computerPick).classList.remove("tieglow");}, 700);
+    setTimeout(function(){document.getElementById(computerPick).classList.remove("tieglow");}, 600);
     
     document.getElementById(playerPick).classList.add("tieglow");
-    setTimeout(function(){document.getElementById(playerPick).classList.remove("tieglow");}, 700);
+    setTimeout(function(){document.getElementById(playerPick).classList.remove("tieglow");}, 600);
     }
 function showwindow(){
   let window = document.getElementById("popup");
