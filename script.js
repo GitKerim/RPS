@@ -15,33 +15,41 @@ playerChoices.forEach(playerChoice => playerChoice.addEventListener("click", (e)
 }))
 function playerwins(){
 document.getElementById(playerPick).classList.add("winglow");
-setTimeout(function(){document.getElementById(playerPick).classList.remove("winglow");}, 1000);
+setTimeout(function(){document.getElementById(playerPick).classList.remove("winglow");}, 700);
 
 document.getElementById(computerPick).classList.add("loseglow");
-setTimeout(function(){document.getElementById(computerPick).classList.remove("loseglow");}, 1000);
+setTimeout(function(){document.getElementById(computerPick).classList.remove("loseglow");}, 700);
 }
 
 function computerwins(){
   document.getElementById(computerPick).classList.add("winglow");
-  setTimeout(function(){document.getElementById(computerPick).classList.remove("winglow");}, 1000);
+  setTimeout(function(){document.getElementById(computerPick).classList.remove("winglow");}, 700);
   
   document.getElementById(playerPick).classList.add("loseglow");
-  setTimeout(function(){document.getElementById(playerPick).classList.remove("loseglow");}, 1000);
+  setTimeout(function(){document.getElementById(playerPick).classList.remove("loseglow");}, 700);
   }
 
   function tie(){
     document.getElementById(computerPick).classList.add("tieglow");
-    setTimeout(function(){document.getElementById(computerPick).classList.remove("tieglow");}, 1000);
+    setTimeout(function(){document.getElementById(computerPick).classList.remove("tieglow");}, 700);
     
     document.getElementById(playerPick).classList.add("tieglow");
-    setTimeout(function(){document.getElementById(playerPick).classList.remove("tieglow");}, 1000);
+    setTimeout(function(){document.getElementById(playerPick).classList.remove("tieglow");}, 700);
     }
-
+function hidewindow(){
+  let window = document.getElementById("popup");
+  window.style.display = 'block';
+}
 function wincounter(){
+  let popupText = document.getElementById("popup-p");
+
   if(playerScore === 5){
-    console.log("Game Over Player Wins");
+    popupText.innerText = "Player Wins !"; 
+hidewindow();
+
   }else if(computerScore === 5){
-    console.log( "Game Over Computer Wins");
+    popupText.innerText = "Computer Wins !"; 
+hidewindow();
   } 
 }
 
